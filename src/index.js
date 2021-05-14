@@ -1,13 +1,13 @@
 'use strict';
 import app from './app';
-import './styles.css';
+import './assets/css/styles.css';
 import cuid from 'cuid';
 
 class startUp
 {
   constructor(){
-    this.runId = [cuid()];
-    this.ap = new app(this.runId);
+    this.startupArgs = [cuid()];
+    this.ap = new app(this.startupArgs);
   } 
 }
 

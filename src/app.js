@@ -1,14 +1,17 @@
 'use strict';
+import transitions from './collections/transitionCollection';
 export default class app
 {
-  constructor(args){   
-    this.args = args;
-    this.readyFn = function (__args){
-      console.log(`Document ready. Run Id: ${__args[0]} .`);
-      console.log(window);
-    };
-    $(this.readyFn(this.args));    
-    this.body = $('body')[0];
-    this.body.innerHTML = "12345";
+
+  constructor(args)
+  {   
+      this.args = args;
+      this.readyFn = function (__args){
+        console.log(`Document ready. Run Id: ${__args[0]} .`);
+      }
+      this.transitions = new transitions();
+      this.transitions.helloWorldFlash();
+      $(this.readyFn(this.args));
   }
-}
+
+} 
