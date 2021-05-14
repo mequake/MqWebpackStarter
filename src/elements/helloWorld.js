@@ -5,7 +5,7 @@ export default class helloWorld
     this.t = Date.now;
     try
     {
-      this.element = $(`<div class="cssD001">
+      this.element = $(`<div class="notification is-primary">
       <div class="cssD002">
         Hello World
       </div>

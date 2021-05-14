@@ -1,7 +1,8 @@
 'use strict';
 import app from './app';
-import './assets/css/styles.css';
+//import './assets/css/styles.css';
 import cuid from 'cuid';
+import('./assets/css/mystyles.scss')
 
 class startUp
 {
