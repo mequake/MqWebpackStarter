@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
+    "axios": "^0.21.1",
     "cuid": "^2.1.8",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
