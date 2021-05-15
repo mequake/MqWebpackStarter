@@ -1,8 +1,11 @@
 import HelloWorld from '../elements/helloWorld';
 
 export default class elementCollection {
-  helloWorld() {
+  constructor() {
     this.HelloWorld = HelloWorld;
-    return new HelloWorld();
+  }
+
+  helloWorld() {
+    return new this.HelloWorld();
   }
 }
