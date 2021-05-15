@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
   mode: 'development',
@@ -46,6 +47,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ESLintPlugin({ fix: true }),
     new MiniCssExtractPlugin({
       filename: './assets/css/styles.css'
     }),

@@ -1,19 +1,16 @@
-'use strict';
-import animations from './animationCollection';
-import elements from './elementCollection';
-export default class transitionCollection
-{
-  constructor()
-  {
-    this.elements = new elements();
-    this.animations = new animations();
+import Animations from './animationCollection';
+import Elements from './elementCollection';
+
+export default class transitionCollection {
+  constructor() {
+    this.elements = new Elements();
+    this.animations = new Animations();
   }
 
-  helloWorldFlash() {         
-      let e = elements.helloWorld.element;
-      document.body.appendChild(e);
-      this.animations.fadeInFadeOutInPlace(e, 2000);
-      setInterval(function () {document.body.removeChild(e)}, 2001);
-  };
-
+  helloWorldFlash() {
+    const e = this.elements.helloWorld().element;
+    document.body.appendChild(e);
+    this.animations.fadeInFadeOutInPlace(e, 3000);
+    setInterval(() => { e.remove(); }, 3001);
+  }
 }

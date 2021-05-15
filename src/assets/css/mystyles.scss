@@ -1,5 +1,35 @@
 @charset "utf-8";
-@import "~bulma/bulma";
+
+//general color definitions
+$hotOpal: hsl(193, 100%, 48%);
+
+// Set your brand colors
+$black-bis: hsl(193, 52%, 7%);
+$black-ter: hsl(193, 52%, 14%);
+$grey-darker: hsl(193, 52%, 21%);
+$grey-dark: hsl(193, 52%, 29%);
+$grey: hsl(193, 52%, 48%);
+$grey-light: hsl(193, 52%, 71%);
+$grey-lighter: hsl(193, 52%, 86%);
+$white-ter: hsl(193, 52%, 96%);
+$white-bis: hsl(193, 52%, 98%);
+
+// Update Bulma's global variables
+$family-sans-serif: "Junction";
+$primary: $grey-light;
+$link: $hotOpal;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $grey-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$box-radius: 12px;
+
+// Import only what you need from Bulma
+@import "../../../node_modules/bulma/bulma.sass";
 
 @font-face {
   font-family: 'Junction';
@@ -17,36 +47,3 @@
   src: url('../fonts/junction-light.woff');
   font-weight: lighter;
 }
-
-// Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
-$beige-lighter: #EFF0EB;
-
-// Update Bulma's global variables
-$family-sans-serif: "Junction";
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
-
-// Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
-
-// Import only what you need from Bulma
-@import "../../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../../node_modules/bulma/sass/base/_all.sass";
-@import "../../../node_modules/bulma/sass/elements/button.sass";
-@import "../../../node_modules/bulma/sass/elements/container.sass";
-@import "../../../node_modules/bulma/sass/elements/title.sass";
-@import "../../../node_modules/bulma/sass/form/_all.sass";
-@import "../../../node_modules/bulma/sass/components/navbar.sass";
-@import "../../../node_modules/bulma/sass/layout/hero.sass";
-@import "../../../node_modules/bulma/sass/layout/section.sass";
