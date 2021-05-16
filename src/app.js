@@ -6,7 +6,7 @@ export default class app {
   }
 
   Start() {
-    this.transitions = new Transitions();
+    this.transitions = new Transitions(this.args);
     this.transitions.helloWorldFlash();
     // HELLO WORLD PUBLISHED
   }
