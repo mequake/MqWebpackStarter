@@ -1,4 +1,5 @@
 import HelloWorld from '../elements/helloWorld';
+//import ColorCollection from './colorCollection';
 
 export default class elementCollection {
   constructor() {
